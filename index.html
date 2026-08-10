@@ -56,10 +56,45 @@
             >
           </li>
         </ul>
+        <button type="button" class="nav__button js-open-menu">
+          <svg class="nav__button-icon">
+            <use href="./images/burger.svg"></use>
+          </svg>
+        </button>
+      </div>
+      <div class="overlay__header-mobile js-menu-container is-hidden">
+        <div class="container--overlay">
+          <button type="button" class="overlay__btn--close js-close-menu">
+            <svg class="close__btn--icon">
+              <use href="./images/close.svg"></use>
+            </svg>
+          </button>
+          <ul class="header__nav--links">
+            <li class="nav__item"><a href="index.html" class="nav--link">Студія</a></li>
+            <li class="nav__item"><a href="./portfolio.html" class="nav--link">Портфоліо</a></li>
+            <li class="nav__item"><a href="./contacts" class="nav--link">Контакти</a></li>
+          </ul>
+          <ul class="mobile__cantacts">
+            <li class="contact--item">
+              <a href="tel:380961111111" class="contact__link phone-link">+38 096 111 11 11</a>
+            </li>
+            <li class="contact--item">
+              <a href="mailto:info@devstudio.com" class="contact__link mail-link"
+                >info@devstudio.com</a
+              >
+            </li>
+          </ul>
+          <ul class="social-list__links">
+            <li class="social-list--item"><a href="" class="social-link">Instagram</a></li>
+            <li class="social-list--item"><a href="" class="social-link">Twitter</a></li>
+            <li class="social-list--item"><a href="" class="social-link">Facebook</a></li>
+            <li class="social-list--item"><a href="" class="social-link">LinkedIn</a></li>
+          </ul>
+        </div>
       </div>
     </header>
 
-    <main>
+    <!-- <main>
       <section class="section hero">
         <h1 class="hero_title">Ефективні рішення для вашого бізнесу</h1>
         <button class="hero_button" data-modal-open type="button">Замовити послугу</button>
@@ -441,9 +476,9 @@
           </ul>
         </div>
       </section>
-    </main>
+    </main> -->
 
-    <footer class="section footer">
+    <!-- <footer class="section footer">
       <div class="container">
         <div class="footer_first_part">
           <a class="logo link" href="index.html"
@@ -513,7 +548,8 @@
           </span>
         </form>
       </div>
-    </footer>
+    </footer> -->
     <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>

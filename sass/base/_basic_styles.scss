@@ -5,10 +5,19 @@
 }
 
 .is-hidden {
+  visibility: hidden;
   opacity: 0;
   pointer-events: none;
-
 }
+.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: all;
+}
+a {
+  text-decoration: none;
+}
+
 ul,
 ul,
 li {
@@ -34,7 +43,7 @@ li {
 }
 
 body {
-  min-height: 100vh;
+  // min-height: 100vh;
   scroll-behavior: smooth;
   font-family: Roboto, sans-serif;
   color: var(--prime-color);
@@ -51,12 +60,10 @@ img {
 .link {
   text-decoration: none;
 }
-.container {
-  width: 1200px;
-  margin: 0 auto;
-  padding: 0 15px;
-}
 
 section {
   padding: 94px 0;
+}
+button {
+  padding: 0;
 }
