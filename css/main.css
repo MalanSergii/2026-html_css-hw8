@@ -63,8 +63,15 @@ img {
   text-decoration: none;
 }
 
-section {
-  padding: 94px 0;
+@media screen and (min-width: 768px) {
+  section {
+    padding: 60px 0;
+  }
+}
+@media screen and (min-width: 1200px) {
+  section {
+    padding: 94px 0;
+  }
 }
 
 button {
@@ -118,8 +125,8 @@ button {
 @media screen and (min-width: 768px) {
   .container {
     max-width: 768px;
-    padding-top: 21px;
-    padding-bottom: 21px;
+    padding-top: 22px;
+    padding-bottom: 22px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -346,6 +353,10 @@ button {
   .nav__button {
     background-color: transparent;
     border: none;
+    height: 40px;
+  }
+  .nav__button-icon {
+    cursor: pointer;
   }
   .nav__button:focus .nav__button-icon, .nav__button:hover .nav__button-icon {
     fill: var(--accent-color);
@@ -355,26 +366,19 @@ button {
     width: 40px;
     height: 40px;
   }
-  .overlay__header-mobile {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: #ffffff;
-  }
   .overlay__btn--close {
     display: block;
     margin-left: auto;
     background-color: transparent;
     border: none;
+    cursor: pointer;
   }
   .close__btn--icon {
     width: 40px;
     height: 40px;
     transition: fill 250ms var(--cubic);
   }
-  .overlay__btn--close:focus .close__btn--icon, .overlay__btn--close:focus .close__btn--icon {
+  .overlay__btn--close:hover .close__btn--icon, .overlay__btn--close:focus .close__btn--icon {
     fill: var(--accent-color);
   }
   .header__nav--links {
@@ -444,6 +448,15 @@ button {
     color: var(--accent-color);
   }
 }
+.overlay__header-mobile {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #ffffff;
+}
+
 @media screen and (max-width: 450px) {
   .social-link {
     font-size: 3.6vw;
@@ -538,6 +551,12 @@ button {
   .header-contacts-item:not(:last-child) {
     margin-right: 40px;
   }
+  .nav-link {
+    padding: 10px 0;
+  }
+  .header-contacts-link {
+    padding: 10px 0;
+  }
 }
 .logo {
   font-family: Raleway, sans-serif;
@@ -560,41 +579,113 @@ button {
   }
 }
 .hero {
-  display: block;
-  margin: 0 auto;
-  max-width: 1600px;
-  background-color: #C4C4C4;
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4)), url(../images/main/hero.png);
+  background-color: #c4c4c4;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  background-image: url(../../images/mob/hero_bg.webp);
+}
+@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .hero {
+    background-image: url(../../images/mob/hero_bg@x2.webp);
+  }
+}
+.hero {
+  background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
-  text-align: center;
-  padding: 200px 330px;
+}
+@media screen and (min-width: 320px) {
+  .hero {
+    padding-top: 118px;
+    padding-bottom: 118px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .hero {
+    background-image: url(../../images/tablet/hero_bg.webp);
+  }
+}
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: url(../../images/tablet/hero_bg@x2.webp);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .hero {
+    background-image: url(../../images/desktop/hero__bg-desktop.webp);
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
+}
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: url(../../images/desktop/hero__bg-desktop@x2.webp);
+  }
 }
 
 .hero_title {
-  font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
+  display: block;
   text-transform: uppercase;
-  color: #FFFFFF;
-  margin-bottom: 30px;
+  font-family: Roboto;
+  color: #ffffff;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 1.61;
+  letter-spacing: 6%;
+  font-weight: 900;
+  font-size: 26px;
+}
+@media screen and (max-width: 479px) {
+  .hero_title {
+    font-size: 5.5vw;
+    max-width: 80vw;
+  }
+}
+@media screen and (min-width: 480px) {
+  .hero_title {
+    max-width: 360px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .hero_title {
+    font-size: 44px;
+    line-height: 1.36;
+    max-width: 700px;
+  }
 }
 
 .hero_button {
-  cursor: pointer;
+  display: block;
+  margin: 40px auto 0;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.87;
-  color: #FFFFFF;
+  color: #ffffff;
   background-color: var(--accent-color);
   padding: 10px 24px;
   border: none;
   border-radius: 10px;
+  cursor: pointer;
   transition: box-shadow 250ms var(--cubic), background-color 250ms var(--cubic);
 }
 .hero_button:hover, .hero_button:focus {
   background-color: #188ce8;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+}
+@media screen and (max-width: 319px) {
+  .hero_button {
+    font-size: 5vw;
+    padding: 5px 12px;
+  }
+}
+@media screen and (min-width: 320px) {
+  .hero_button {
+    min-width: 200px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .hero_button {
+    margin-top: 30px;
+  }
 }
 
 .features_list {

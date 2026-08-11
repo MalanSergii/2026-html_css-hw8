@@ -1,39 +1,101 @@
 .hero {
-  display: block;
-  margin: 0 auto;
-  max-width: 1600px;
-  background-color: #C4C4C4;
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4)), url(../images/main/hero.png);
+  background-color: #c4c4c4;
+  padding-top: 80px;
+  padding-bottom: 80px;
+
+  background-image: url(../../images/mob/hero_bg.webp) or url(../../images/mob/hero_bg.jpg);
+
+  @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    background-image: url(../../images/mob/hero_bg@x2.webp) or url(../../images/mob/hero_bg@x2.jpg);
+  }
+
+  background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
-  text-align: center;
-  padding: 200px 330px;
+
+  @media screen and (min-width: 320px) {
+    padding-top: 118px;
+    padding-bottom: 118px;
+  }
+  @media screen and (min-width: 480px) {
+  }
+  @media screen and (min-width: 768px) {
+    background-image: url(../../images/tablet/hero_bg.webp) or url(../../images//tablet/hero_bg.jpg);
+
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: url(../../images/tablet/hero_bg@x2.webp) or
+        url(../../images/tablet/hero_bg@x2.jpg);
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    background-image: url(../../images/desktop/hero__bg-desktop.webp) or
+      url(../../images/desktop/hero__bg-desktop.jpg);
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: url(../../images/desktop/hero__bg-desktop@x2.webp) or
+        url(../../images/desktop/hero__bg-desktop@x2.jpg);
+    }
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
 }
 
 .hero_title {
-  font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
+  display: block;
   text-transform: uppercase;
-  color: #FFFFFF;
-  margin-bottom: 30px;
+  font-family: Roboto;
+  color: #ffffff;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 1.61;
+  letter-spacing: 6%;
+  font-weight: 900;
+  font-size: 26px;
+
+  @media screen and (max-width: 479px) {
+    font-size: 5.5vw;
+    max-width: 80vw;
+  }
+  @media screen and (min-width: 480px) {
+    max-width: 360px;
+  }
+  @media screen and (min-width: 768px) {
+  }
+  @media screen and (min-width: 1200px) {
+    font-size: 44px;
+    line-height: 1.36;
+    max-width: 700px;
+  }
 }
 
 .hero_button {
-  cursor: pointer;
+  display: block;
+  margin: 40px auto 0;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.87;
-  color: #FFFFFF;
+  color: #ffffff;
   background-color: var(--accent-color);
   padding: 10px 24px;
   border: none;
   border-radius: 10px;
-  transition: box-shadow 250ms var(--cubic), background-color 250ms var(--cubic);
+  cursor: pointer;
+  transition:
+    box-shadow 250ms var(--cubic),
+    background-color 250ms var(--cubic);
 
   &:hover,
-  &:focus{
+  &:focus {
     background-color: #188ce8;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  }
+
+  @media screen and (max-width: 319px) {
+    font-size: 5vw;
+    padding: 5px 12px;
+  }
+  @media screen and (min-width: 320px) {
+    min-width: 200px;
+  }
+  @media screen and (min-width: 768px) {
+    margin-top: 30px;
   }
 }
