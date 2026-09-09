@@ -6,6 +6,10 @@
     width: 90vw;
     height: 90vh;
   }
+  @media screen and (min-width: 1200px) {
+    width: 528px;
+    min-height: 581px;
+  }
   border-radius: 4px;
   background-color: #fff;
   z-index: 1;

@@ -170,6 +170,12 @@ button {
     height: 90vh;
   }
 }
+@media screen and (min-width: 1200px) {
+  .modal {
+    width: 528px;
+    min-height: 581px;
+  }
+}
 .modal {
   border-radius: 4px;
   background-color: #fff;
@@ -216,7 +222,13 @@ button {
 @media screen and (min-width: 480px) {
   .hero_form {
     width: 450px;
-    height: 609px;
+    min-height: 609px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .hero_form {
+    width: 528px;
+    min-height: 581px;
   }
 }
 
@@ -266,7 +278,6 @@ button {
   display: block;
   font-family: Roboto;
   font-weight: 400;
-  font-size: 12px;
   line-height: 1;
   letter-spacing: 1%;
   margin-bottom: 4px;
@@ -278,6 +289,13 @@ button {
   font-family: Roboto;
   font-weight: 400;
   font-size: 12px;
+}
+@media screen and (min-width: 1200px) {
+  .input_text.policy {
+    font-size: 14px;
+  }
+}
+.input_text.policy {
   line-height: 1.71;
   letter-spacing: 3%;
 }
